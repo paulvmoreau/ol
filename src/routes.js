@@ -45,7 +45,7 @@ function getBusinessesById(req,res){
   res.setHeader('Content-Type', 'application/JSON');
   res.end(JSON.stringify({
     message:"Business found",
-    data:business
+    business:business
   }));
 }
 

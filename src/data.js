@@ -45,7 +45,7 @@ module.exports = {
 
       csv.parse(csvContents,options,function (err,data){
         if(err) return cb(err);
-        csvData = _.sortBy(data,function(b) { return parseInt(b.id); });
+        csvData = _.sortBy(data,function(b) { return parseInt(b.id); }); //need to parse int here as sorting by string will have odd behaviour. 
 
         return cb();
       });
